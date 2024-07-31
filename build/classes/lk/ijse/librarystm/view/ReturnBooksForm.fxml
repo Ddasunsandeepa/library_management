@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="509.0" prefWidth="596.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.librarystm.controller.ReturnBooksFormController">
+    <stylesheets>
+        <URL value="@/lk/ijse/librarystm/view/style/returnbooksform.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="29.0" layoutY="27.0" onMouseClicked="#imgGo_Back_On_Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/Back_48px.png" />
+         </image>
+      </ImageView>
+      <Label contentDisplay="TOP" layoutX="75.0" layoutY="27.0" prefHeight="46.0" prefWidth="279.0" text="Book Returning....." textFill="#145974" underline="true" wrapText="true">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtMemberId" layoutX="39.0" layoutY="98.0" onKeyPressed="#member_txtEnter_pressed" prefHeight="34.0" prefWidth="166.0" promptText="Member ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMemberName" layoutX="272.0" layoutY="98.0" onKeyReleased="#FinfBookInfo_On_Action" prefHeight="39.0" prefWidth="299.0" promptText="Member Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBkId1" layoutX="40.0" layoutY="162.0" onKeyPressed="#txtBookid_onkeyPressed" prefHeight="34.0" prefWidth="166.0" promptText="Book ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBkName1" layoutX="272.0" layoutY="162.0" onKeyReleased="#FinfBookInfo_On_Action" prefHeight="39.0" prefWidth="299.0" promptText="Book Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblBookView" layoutX="30.0" layoutY="259.0" prefHeight="200.0" prefWidth="555.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Book ID" />
+            <TableColumn prefWidth="72.79999542236328" text="ISBN" />
+            <TableColumn prefWidth="199.20001220703125" text="Book Name" />
+            <TableColumn prefWidth="123.20001220703125" text="Author" />
+            <TableColumn prefWidth="86.39993286132812" text="Publisher" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnSave" layoutX="454.0" layoutY="213.0" mnemonicParsing="false" onAction="#btnBookAdd_On_Action" prefHeight="26.0" prefWidth="51.0" text="Add" />
+      <Button fx:id="btnCancel" layoutX="519.0" layoutY="214.0" mnemonicParsing="false" onAction="#btnCancel_On_Action" text="Cancel" />
+      <Button layoutX="501.0" layoutY="459.0" mnemonicParsing="false" onAction="#btnReturn_On_Action" text="Return">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="txtWarning" layoutX="440.0" layoutY="35.0" prefHeight="17.0" prefWidth="121.0" text="Label" />
+   </children>
+</AnchorPane>

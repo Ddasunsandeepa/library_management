@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="509.0" prefWidth="596.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.librarystm.controller.AddBookFormController">
+    <stylesheets>
+        <URL value="@/lk/ijse/librarystm/view/style/addbookform.css" />
+    </stylesheets>
+   <children>
+      <Label contentDisplay="TOP" layoutX="60.0" layoutY="25.0" prefHeight="46.0" prefWidth="279.0" text="Book Information....." textFill="#145974" underline="true" wrapText="true">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtBkId" layoutX="30.0" layoutY="85.0" prefHeight="34.0" prefWidth="166.0" promptText="Book ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="14.0" layoutY="25.0" onMouseClicked="#imgGo_Back_On_Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/Back_48px.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtBkName" layoutX="228.0" layoutY="85.0" prefHeight="39.0" prefWidth="299.0" promptText="Book Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBkIsbn" layoutX="30.0" layoutY="137.0" prefHeight="34.0" prefWidth="166.0" promptText="ISBN:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAuthor" layoutX="228.0" layoutY="137.0" prefHeight="39.0" prefWidth="299.0" promptText="Author:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPublisher" layoutX="30.0" layoutY="188.0" prefHeight="34.0" prefWidth="166.0" promptText="Publisher:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Button fx:id="btnSave" layoutX="418.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnSave_On_Action" prefHeight="26.0" prefWidth="51.0" text="Save" />
+      <Button fx:id="btnCancel" layoutX="483.0" layoutY="227.0" mnemonicParsing="false" onAction="#btnCancel_On_Action" text="Cancel" />
+      <TableView fx:id="tblBookView" layoutX="20.0" layoutY="286.0" prefHeight="200.0" prefWidth="555.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Book ID" />
+          <TableColumn prefWidth="191.19995880126953" text="Book name" />
+            <TableColumn prefWidth="79.20001220703125" text="ISBN" />
+            <TableColumn prefWidth="123.20001220703125" text="Author" />
+            <TableColumn prefWidth="86.39993286132812" text="Publisher" />
+        </columns>
+      </TableView>
+      <Button layoutX="534.0" layoutY="92.0" mnemonicParsing="false" onAction="#btnSearch_On_Action" text="Search" />
+      <Button fx:id="Remove_btn" layoutX="34.0" layoutY="252.0" mnemonicParsing="false" onMouseClicked="#Remove_btn" text="Remove" />
+      <Button layoutX="418.0" layoutY="73.0" mnemonicParsing="false" onAction="#sql_report" text="Reports" />
+   </children>
+</AnchorPane>

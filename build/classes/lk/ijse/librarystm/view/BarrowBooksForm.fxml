@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="509.0" prefWidth="596.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.librarystm.controller.BarrowBooksFormController">
+    <stylesheets>
+        <URL value="@/lk/ijse/librarystm/view/style/barrowbooksform.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="19.0" layoutY="17.0" onMouseClicked="#imgGo_Back_On_Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/Back_48px.png" />
+         </image>
+      </ImageView>
+      <Label contentDisplay="TOP" layoutX="65.0" layoutY="17.0" prefHeight="46.0" prefWidth="279.0" text="Book Barrowings....." textFill="#145974" underline="true" wrapText="true">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtMemberId" layoutX="27.0" layoutY="76.0" prefHeight="34.0" prefWidth="166.0" promptText="Member ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMemberName" layoutX="263.0" layoutY="76.0" prefHeight="39.0" prefWidth="299.0" promptText="Member Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBkId1" layoutX="28.0" layoutY="115.0" onKeyPressed="#enter_press" prefHeight="34.0" prefWidth="166.0" promptText="Book ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBkName1" layoutX="257.0" layoutY="126.0" onKeyReleased="#FinfBookInfo_On_Action" prefHeight="39.0" prefWidth="299.0" promptText="Book Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblBookView" layoutX="20.0" layoutY="249.0" prefHeight="200.0" prefWidth="555.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="Book ID:" />
+            <TableColumn prefWidth="202.0" text="Book Name" />
+            <TableColumn prefWidth="71.0" text="ISBN" />
+            <TableColumn prefWidth="123.20001220703125" text="Author" />
+            <TableColumn prefWidth="86.39993286132812" text="Publisher" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnSave" layoutX="458.0" layoutY="179.0" mnemonicParsing="false" onAction="#btnBookAdd_On_Action" prefHeight="26.0" prefWidth="51.0" text="Add" />
+      <Button fx:id="btnCancel" layoutX="523.0" layoutY="179.0" mnemonicParsing="false" onAction="#btnCancel_On_Action" text="Cancel" />
+      <Button layoutX="492.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnBarrow_On_Action" text="Barrow">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="35.0" layoutY="461.0" prefHeight="30.0" prefWidth="210.0" text="*Select Only 5 Books*" textFill="#f01313">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblwarning" layoutX="391.0" layoutY="32.0" prefHeight="17.0" prefWidth="171.0" />
+      <Button layoutX="205.0" layoutY="83.0" mnemonicParsing="false" onMouseClicked="#btnSearch_action" text="Search" />
+      <Button layoutX="370.0" layoutY="179.0" mnemonicParsing="false" onAction="#report_barrowings" text="Add report" />
+      <JFXTextField fx:id="txtbarrow" layoutX="29.0" layoutY="160.0" prefHeight="26.0" prefWidth="166.0" promptText="Barrow_id">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtdate" layoutX="29.0" layoutY="203.0" prefHeight="37.0" prefWidth="166.0" promptText="Date">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtReturned" layoutX="231.0" layoutY="182.0" prefHeight="33.0" prefWidth="112.0" promptText="Returned">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

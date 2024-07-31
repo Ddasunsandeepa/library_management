@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="593.0" prefWidth="733.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.librarystm.controller.MainformController">
+   <children>
+      <Label layoutX="88.0" layoutY="37.0" prefHeight="59.0" prefWidth="559.0" text="Library Management System" textAlignment="CENTER" textFill="#145974" underline="true">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Label>
+      <Label layoutX="238.0" layoutY="494.0" prefHeight="18.0" prefWidth="258.0" text="Copyright @ IJSE ,2018 - All Rights Reserved.">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="428.0" fitWidth="531.0" layoutX="101.0" layoutY="145.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/books-library-lochaven-2588186224_16e1ba8f57_b-black-white-500x250.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgBook" fitHeight="106.0" fitWidth="114.0" layoutX="164.0" layoutY="213.0" onMouseClicked="#navigateToHome" onMouseEntered="#imgMouseEntered_On_Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/book.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgReturn" fitHeight="84.0" fitWidth="106.0" layoutX="325.0" layoutY="224.0" onMouseClicked="#navigateToHome" onMouseEntered="#imgMouseEntered_On_Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/return.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgReport" fitHeight="96.0" fitWidth="106.0" layoutX="584.0" layoutY="220.0" onMouseClicked="#navigateToHome" onMouseEntered="#imgMouseEntered_On_Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/Report.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgBarrow" fitHeight="106.0" fitWidth="115.0" focusTraversable="true" layoutX="35.0" layoutY="213.0" onMouseClicked="#navigateToHome" onMouseEntered="#imgMouseEntered_On_Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/Add%20Shopping%20Cart_96px.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbldisplay_Text" contentDisplay="CENTER" layoutX="268.0" layoutY="438.0" prefHeight="35.0" prefWidth="235.0" text="WELCOME" textAlignment="CENTER" textFill="#145974">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgMember" fitHeight="106.0" fitWidth="106.0" layoutX="443.0" layoutY="215.0" onMouseClicked="#navigateToHome" onMouseEntered="#imgMouseEntered_On_Action" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/member.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
